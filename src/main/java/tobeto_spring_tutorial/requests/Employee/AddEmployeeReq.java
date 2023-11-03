@@ -1,4 +1,4 @@
 package tobeto_spring_tutorial.requests.Employee;
 
-public record AddEmployeeReq(String name, String emailAddress, long tckimlik) {
+public record AddEmployeeReq(String name, String emailAddress) {
 }

@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+import tobeto_spring_tutorial.DTO.CategoryDTO;
 
 import javax.persistence.*;
 
@@ -12,25 +14,20 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Employee {
-
+@SuperBuilder
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
-
     private String name;
-    private String emailAddress;
 
-
-    @Override
-    public String toString() {
-        return
-                "id=" + id + '\n' +
-                        "name=" + name + '\n' +
-                        "emailAddress=" + emailAddress + "\n\n";
+    public CategoryDTO convertToDTO(){
+        return CategoryDTO.builder()
+                .id(this.id)
+                .name(this.name)
+                .build();
     }
-
 
 }
