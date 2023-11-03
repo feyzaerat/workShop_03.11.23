@@ -33,6 +33,12 @@ public class OrderController {
         order2.setName(order.getName());
     }
 
+    @PutMapping("{id}")
+    public void update2(@PathVariable int id, @RequestBody Order order){
+        Order order4 = inMemoryList.stream().filter((o)->o.getId()==id).findFirst().orElseThrow();
+        order4.setName(order.getName());
+    }
+
     @DeleteMapping("{id}")
     public void delete(@PathVariable int id){
         Order order3 = inMemoryList.stream().filter((o)-> o.getId() == id).findFirst().orElseThrow();
