@@ -1,11 +1,11 @@
 package tobeto_spring_tutorial.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import tobeto_spring_tutorial.business.abstracts.EmployerService;
-import tobeto_spring_tutorial.requests.Employer.AddEmployerReq;
-import tobeto_spring_tutorial.requests.Employer.DeleteEmployerReq;
-import tobeto_spring_tutorial.requests.Employer.GetEmployerReq;
-import tobeto_spring_tutorial.requests.Employer.UpdateEmployerReq;
+import tobeto_spring_tutorial.business.services.abstracts.EmployerService;
+import tobeto_spring_tutorial.data.requests.Employer.AddEmployerReq;
+import tobeto_spring_tutorial.data.requests.Employer.DeleteEmployerReq;
+import tobeto_spring_tutorial.data.requests.Employer.GetEmployerReq;
+import tobeto_spring_tutorial.data.requests.Employer.UpdateEmployerReq;
 
 @RestController
 @RequestMapping("api/employer")

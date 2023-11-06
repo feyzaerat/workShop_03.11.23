@@ -1,11 +1,11 @@
 package tobeto_spring_tutorial.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import tobeto_spring_tutorial.business.abstracts.ProductService;
-import tobeto_spring_tutorial.requests.Product.AddProductReq;
-import tobeto_spring_tutorial.requests.Product.DeleteProductReq;
-import tobeto_spring_tutorial.requests.Product.GetProductReq;
-import tobeto_spring_tutorial.requests.Product.UpdateProductReq;
+import tobeto_spring_tutorial.business.services.abstracts.ProductService;
+import tobeto_spring_tutorial.data.requests.Product.AddProductReq;
+import tobeto_spring_tutorial.data.requests.Product.DeleteProductReq;
+import tobeto_spring_tutorial.data.requests.Product.GetProductReq;
+import tobeto_spring_tutorial.data.requests.Product.UpdateProductReq;
 
 @RestController
 @RequestMapping("api/product")

@@ -3,12 +3,12 @@ package tobeto_spring_tutorial.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tobeto_spring_tutorial.business.CategoryManager;
-import tobeto_spring_tutorial.requests.Category.AddCategoryReq;
-import tobeto_spring_tutorial.requests.Category.DeleteCategoryReq;
-import tobeto_spring_tutorial.requests.Category.GetCategoryReq;
-import tobeto_spring_tutorial.requests.Category.UpdateCategroyReq;
-import tobeto_spring_tutorial.responses.TCResponse;
+import tobeto_spring_tutorial.business.services.CategoryManager;
+import tobeto_spring_tutorial.data.requests.Category.AddCategoryReq;
+import tobeto_spring_tutorial.data.requests.Category.DeleteCategoryReq;
+import tobeto_spring_tutorial.data.requests.Category.GetCategoryReq;
+import tobeto_spring_tutorial.data.requests.Category.UpdateCategroyReq;
+import tobeto_spring_tutorial.data.DTO.responses.TCResponse;
 
 @RestController
 @RequestMapping("api/category")
@@ -65,8 +65,8 @@ public class CategoryController {
     public ResponseEntity<TCResponse<?>> deleteCategory(@RequestBody DeleteCategoryReq deleteCategoryReq){
         return ResponseEntity.ok(TCResponse.builder()
                 .isSuccess(true)
-                .response(this.categoryManager.delete(deleteCategoryReq))
                 .message("Kategori silindi")
+                .response(this.categoryManager.delete(deleteCategoryReq))
                 .build()
         );
     }
