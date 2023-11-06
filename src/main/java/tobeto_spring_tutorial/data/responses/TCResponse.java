@@ -1,4 +1,4 @@
-package tobeto_spring_tutorial.data.DTO.responses;
+package tobeto_spring_tutorial.data.responses;
 
 import lombok.Builder;
 

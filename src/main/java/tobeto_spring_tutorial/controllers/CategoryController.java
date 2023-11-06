@@ -8,7 +8,7 @@ import tobeto_spring_tutorial.data.requests.Category.AddCategoryReq;
 import tobeto_spring_tutorial.data.requests.Category.DeleteCategoryReq;
 import tobeto_spring_tutorial.data.requests.Category.GetCategoryReq;
 import tobeto_spring_tutorial.data.requests.Category.UpdateCategroyReq;
-import tobeto_spring_tutorial.data.DTO.responses.TCResponse;
+import tobeto_spring_tutorial.data.responses.TCResponse;
 
 @RestController
 @RequestMapping("api/category")
